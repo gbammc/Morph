@@ -1,14 +1,17 @@
 //
-//  AnimationAttribute.swift
+//  Attribute.swift
 //  Morph
 //
-//  Created by Alvin on 08/01/2017.
+//  Created by Alvin on 09/01/2017.
 //  Copyright © 2017 Alvin. All rights reserved.
 //
 
 import Foundation
 
-enum AnimationAttribute {
+public enum Attribute {
+    
+    case none
+    
     case bounds
     case size
     case origin
@@ -45,7 +48,7 @@ enum AnimationAttribute {
     case miterLimit
     case lineDashPhase
     
-    var keyPath: String {
+    public var keyPath: String {
         switch self {
         case .bounds:
             return "bounds"

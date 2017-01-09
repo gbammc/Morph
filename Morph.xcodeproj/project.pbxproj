@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E19B7A5C1E2381350072A7C6 /* AnimationChainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B7A5B1E2381350072A7C6 /* AnimationChainable.swift */; };
+		E1D5FA2B1E23335D00422210 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA2A1E23335D00422210 /* Attribute.swift */; };
+		E1D5FA2D1E2333A300422210 /* AnimationMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA2C1E2333A300422210 /* AnimationMaker.swift */; };
+		E1D5FA2F1E2333B400422210 /* KeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA2E1E2333B400422210 /* KeyframeAnimation.swift */; };
+		E1D5FA311E2333D300422210 /* AnimationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA301E2333D300422210 /* AnimationGroup.swift */; };
+		E1D5FA331E23343A00422210 /* KeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA321E23343A00422210 /* KeyframeAnimationFunction.swift */; };
 		E1DF76241E2099CD00848102 /* Morph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DF761A1E2099CD00848102 /* Morph.framework */; };
 		E1DF76291E2099CD00848102 /* MorphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF76281E2099CD00848102 /* MorphTests.swift */; };
 		E1DF762B1E2099CD00848102 /* Morph.h in Headers */ = {isa = PBXBuildFile; fileRef = E1DF761D1E2099CD00848102 /* Morph.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1DF76361E22422500848102 /* AnimationAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DF76351E22422500848102 /* AnimationAttribute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,13 +29,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E19B7A5B1E2381350072A7C6 /* AnimationChainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationChainable.swift; sourceTree = "<group>"; };
+		E1D5FA2A1E23335D00422210 /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		E1D5FA2C1E2333A300422210 /* AnimationMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationMaker.swift; sourceTree = "<group>"; };
+		E1D5FA2E1E2333B400422210 /* KeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeAnimation.swift; sourceTree = "<group>"; };
+		E1D5FA301E2333D300422210 /* AnimationGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationGroup.swift; sourceTree = "<group>"; };
+		E1D5FA321E23343A00422210 /* KeyframeAnimationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeAnimationFunction.swift; sourceTree = "<group>"; };
 		E1DF761A1E2099CD00848102 /* Morph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Morph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DF761D1E2099CD00848102 /* Morph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Morph.h; sourceTree = "<group>"; };
 		E1DF761E1E2099CD00848102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1DF76231E2099CD00848102 /* MorphTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorphTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DF76281E2099CD00848102 /* MorphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphTests.swift; sourceTree = "<group>"; };
 		E1DF762A1E2099CD00848102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1DF76351E22422500848102 /* AnimationAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationAttribute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +84,12 @@
 			isa = PBXGroup;
 			children = (
 				E1DF761D1E2099CD00848102 /* Morph.h */,
-				E1DF76351E22422500848102 /* AnimationAttribute.swift */,
+				E1D5FA2A1E23335D00422210 /* Attribute.swift */,
+				E1D5FA2C1E2333A300422210 /* AnimationMaker.swift */,
+				E19B7A5B1E2381350072A7C6 /* AnimationChainable.swift */,
+				E1D5FA2E1E2333B400422210 /* KeyframeAnimation.swift */,
+				E1D5FA301E2333D300422210 /* AnimationGroup.swift */,
+				E1D5FA321E23343A00422210 /* KeyframeAnimationFunction.swift */,
 				E1DF761E1E2099CD00848102 /* Info.plist */,
 			);
 			path = Morph;
@@ -202,7 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DF76361E22422500848102 /* AnimationAttribute.swift in Sources */,
+				E1D5FA331E23343A00422210 /* KeyframeAnimationFunction.swift in Sources */,
+				E1D5FA2D1E2333A300422210 /* AnimationMaker.swift in Sources */,
+				E19B7A5C1E2381350072A7C6 /* AnimationChainable.swift in Sources */,
+				E1D5FA311E2333D300422210 /* AnimationGroup.swift in Sources */,
+				E1D5FA2F1E2333B400422210 /* KeyframeAnimation.swift in Sources */,
+				E1D5FA2B1E23335D00422210 /* Attribute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +356,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Morph/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.alvinzhu.Morph;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +378,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Morph/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.alvinzhu.Morph;
 				PRODUCT_NAME = "$(TARGET_NAME)";
