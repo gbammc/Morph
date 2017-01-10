@@ -35,9 +35,43 @@ open class KeyframeAnimation: CAKeyframeAnimation {
     }
     
     open func from(value: AnimationChainable) -> KeyframeAnimation {
-        
+        fromValue = preprocessFromValue(value: value.boxValue())
         
         return self
+    }
+    
+    open func to(value: AnimationChainable) -> KeyframeAnimation {
+        toValue = preprocessToValue(value: value.boxValue())
+        
+        return self
+    }
+    
+    open func by(values: [AnyObject]) -> KeyframeAnimation {
+        self.values = values
+        
+        return self
+    }
+    
+    open func during(values: [NSNumber]) -> KeyframeAnimation {
+        keyTimes = values
+        
+        return self
+    }
+    
+    open func delay(timeInterval: TimeInterval) -> KeyframeAnimation {
+        beginTime = CACurrentMediaTime() + timeInterval
+        
+        return self
+    }
+    
+    open func animate(timeInterval: TimeInterval) -> KeyframeAnimation {
+        duration = timeInterval
+        
+        return self
+    }
+    
+    open func calculate() {
+        createValueArray()
     }
 
 }
@@ -272,9 +306,169 @@ fileprivate let FPS: Double = 60
 
 fileprivate extension KeyframeAnimation {
     
+    fileprivate func preprocessFromValue(value: AnyObject) -> AnyObject {
+        
+        guard value.isKind(of: NSNumber.self), let f = value.doubleValue else {
+            return value
+        }
+        
+        var value = value
+        
+        if (attribute == .rotateX || attribute == .rotateY || attribute == .rotateZ) {
+            
+            value = NSNumber(value: (f / 180 * M_PI))
+            
+        } else if attribute == .scale, fabs(f) < DBL_EPSILON {
+            
+            value = NSNumber(value: DBL_EPSILON)
+            
+        } else if attribute == .scaleX {
+            
+            let transform = CATransform3DMakeScale(CGFloat(f), 1, 1)
+            value = NSValue(caTransform3D: transform)
+            
+        } else if attribute == .scaleY {
+            
+            let transform = CATransform3DMakeScale(1, CGFloat(f), 1)
+            value = NSValue(caTransform3D: transform)
+            
+        }
+        
+        return value
+    }
+    
+    fileprivate func preprocessToValue(value: AnyObject) -> AnyObject {
+        
+        guard value.isKind(of: NSNumber.self), let f = value.doubleValue else {
+            return value
+        }
+        
+        var value = value
+        
+        if (attribute == .rotateX || attribute == .rotateY || attribute == .rotateZ) {
+            
+            value = NSNumber(value: (f / 180 * M_PI))
+            
+        } else if attribute == .scale, fabs(f) < DBL_EPSILON {
+            
+            value = NSNumber(value: DBL_EPSILON)
+            
+        } else if attribute == .scaleX {
+            
+            let transform = CATransform3DMakeScale(CGFloat(f), 1, 1)
+            value = NSValue(caTransform3D: transform)
+            
+        } else if attribute == .scaleY {
+            
+            let transform = CATransform3DMakeScale(1, CGFloat(f), 1)
+            value = NSValue(caTransform3D: transform)
+            
+        } else if attribute == .xOffset {
+            
+            let newX = Double(self.layer?.position.x ?? 0) + f
+            value = NSNumber(value: newX)
+        
+        } else if attribute == .yOffset {
+            
+            let newY = Double(self.layer?.position.y ?? 0) + f
+            value = NSNumber(value: newY)
+            
+        } else if attribute == .widthOffset {
+            
+            let newWidth = Double(self.layer?.bounds.size.width ?? 0) + f
+            value = NSNumber(value: newWidth)
+            
+        } else if attribute == .heightOffset {
+            
+            let newHeight = Double(self.layer?.bounds.size.height ?? 0) + f
+            value = NSNumber(value: newHeight)
+            
+        }
+        
+        return value
+    }
+    
     fileprivate func createValueArray() {
         if let fromValue: AnyObject = self.fromValue, let toValue: AnyObject = self.toValue {
+            if valueIsKind(of: NSNumber.self) {
+                
+                values = valueArray(for: CGFloat(fromValue.doubleValue), endValue: CGFloat(toValue.doubleValue))
+                
+            } else if valueIsKind(of: UIColor.self) {
+                
+                let fromColor = fromValue.cgColor
+                let toColor = toValue.cgColor
+                
+                if let fromComponents = fromColor?.components, let toComponents = toColor?.components {
+                    
+                    let redValues = valueArray(for: fromComponents[0], endValue: toComponents[0])
+                    let greenValues = valueArray(for: fromComponents[1], endValue: toComponents[1])
+                    let blueValues = valueArray(for: fromComponents[2], endValue: toComponents[2])
+                    let alphaValues = valueArray(for: fromComponents[3], endValue: toComponents[3])
+                    
+                    values = colorArray(from: redValues, greenValues: greenValues, blueValues: blueValues, alphaValues: alphaValues)
+                    
+                }
+                
+            } else if valueIsKind(of: NSValue.self) {
+                
+                let valueType: NSString = NSString(cString: fromValue.objCType, encoding: 1)!
+                
+                if valueType.contains("CGRect"), let fromRect = fromValue.cgRectValue, let toRect = toValue.cgRectValue {
+                    
+                    let xValues = valueArray(for: fromRect.origin.x, endValue: toRect.origin.x)
+                    let yValues = valueArray(for: fromRect.origin.y, endValue: toRect.origin.y)
+                    let widths = valueArray(for: fromRect.size.width, endValue: toRect.size.width)
+                    let heights = valueArray(for: fromRect.size.height, endValue: toRect.size.height)
+                    
+                    values = rectArray(from: xValues, yValues: yValues, widths: widths, heights: heights)
+                    
+                } else if valueType.contains("CGPoint"), let fromPoint = fromValue.cgPointValue, let toPoint = toValue.cgPointValue {
+                    
+                    let xValues = valueArray(for: fromPoint.x, endValue: toPoint.x)
+                    let yValues = valueArray(for: fromPoint.y, endValue: toPoint.y)
+                    
+                    path = path(from: xValues, yValues: yValues)
+                    
+                } else if valueType.contains("CGSize"), let fromSize = fromValue.cgSizeValue, let toSize = toValue.cgSizeValue {
+                    
+                    let widths = valueArray(for: fromSize.width, endValue: toSize.width)
+                    let heights = valueArray(for: fromSize.height, endValue: toSize.height)
+                    
+                    path = path(from: widths, yValues: heights)
+                    
+                } else if valueType.contains("CATransform3D"), let fromTransform = fromValue.caTransform3DValue, let toTransform = toValue.caTransform3DValue {
+                    
+                    let m11 = valueArray(for: fromTransform.m11, endValue: toTransform.m11)
+                    let m12 = valueArray(for: fromTransform.m12, endValue: toTransform.m12)
+                    let m13 = valueArray(for: fromTransform.m13, endValue: toTransform.m13)
+                    let m14 = valueArray(for: fromTransform.m14, endValue: toTransform.m14)
+                    
+                    let m21 = valueArray(for: fromTransform.m21, endValue: toTransform.m21)
+                    let m22 = valueArray(for: fromTransform.m22, endValue: toTransform.m22)
+                    let m23 = valueArray(for: fromTransform.m23, endValue: toTransform.m23)
+                    let m24 = valueArray(for: fromTransform.m24, endValue: toTransform.m24)
+                    
+                    let m31 = valueArray(for: fromTransform.m31, endValue: toTransform.m31)
+                    let m32 = valueArray(for: fromTransform.m32, endValue: toTransform.m32)
+                    let m33 = valueArray(for: fromTransform.m33, endValue: toTransform.m33)
+                    let m34 = valueArray(for: fromTransform.m34, endValue: toTransform.m34)
+                    
+                    let m41 = valueArray(for: fromTransform.m41, endValue: toTransform.m41)
+                    let m42 = valueArray(for: fromTransform.m42, endValue: toTransform.m42)
+                    let m43 = valueArray(for: fromTransform.m43, endValue: toTransform.m43)
+                    let m44 = valueArray(for: fromTransform.m44, endValue: toTransform.m44)
+                    
+                    values = transformArray(from: m11, m12: m12, m13: m13, m14: m14,
+                                            m21: m21, m22: m22, m23: m23, m24: m24,
+                                            m31: m31, m32: m32, m33: m33, m34: m34,
+                                            m41: m41, m42: m42, m43: m43, m44: m44)
+                    
+                }
+                
+            }
             
+            timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         }
     }
     
