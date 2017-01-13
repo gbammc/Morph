@@ -34,37 +34,37 @@ open class KeyframeAnimation: CAKeyframeAnimation {
         fatalError("init(coder:) has not been implemented")
     }
     
-    open func from(value: AnimationChainable) -> KeyframeAnimation {
+    @discardableResult open func from(_ value: AnimationChainable) -> KeyframeAnimation {
         fromValue = preprocessFromValue(value: value.boxValue())
         
         return self
     }
     
-    open func to(value: AnimationChainable) -> KeyframeAnimation {
+    @discardableResult open func to(_ value: AnimationChainable) -> KeyframeAnimation {
         toValue = preprocessToValue(value: value.boxValue())
         
         return self
     }
     
-    open func by(values: [AnyObject]) -> KeyframeAnimation {
+    @discardableResult open func by(_ values: [AnyObject]) -> KeyframeAnimation {
         self.values = values
         
         return self
     }
     
-    open func during(values: [NSNumber]) -> KeyframeAnimation {
+    @discardableResult open func during(_ values: [NSNumber]) -> KeyframeAnimation {
         keyTimes = values
         
         return self
     }
     
-    open func delay(timeInterval: TimeInterval) -> KeyframeAnimation {
+    @discardableResult open func delay(_ timeInterval: TimeInterval) -> KeyframeAnimation {
         beginTime = CACurrentMediaTime() + timeInterval
         
         return self
     }
     
-    open func animate(timeInterval: TimeInterval) -> KeyframeAnimation {
+    @discardableResult open func animate(_ timeInterval: TimeInterval) -> KeyframeAnimation {
         duration = timeInterval
         
         return self

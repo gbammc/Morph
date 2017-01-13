@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E17F38F01E2505390068CCA2 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F38EF1E2505390068CCA2 /* Animatable.swift */; };
 		E19B7A5C1E2381350072A7C6 /* AnimationChainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B7A5B1E2381350072A7C6 /* AnimationChainable.swift */; };
 		E1D5FA2B1E23335D00422210 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA2A1E23335D00422210 /* Attribute.swift */; };
-		E1D5FA2D1E2333A300422210 /* AnimationMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA2C1E2333A300422210 /* AnimationMaker.swift */; };
+		E1D5FA2D1E2333A300422210 /* AnimationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA2C1E2333A300422210 /* AnimationAnimator.swift */; };
 		E1D5FA2F1E2333B400422210 /* KeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA2E1E2333B400422210 /* KeyframeAnimation.swift */; };
 		E1D5FA311E2333D300422210 /* AnimationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA301E2333D300422210 /* AnimationGroup.swift */; };
 		E1D5FA331E23343A00422210 /* KeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA321E23343A00422210 /* KeyframeAnimationFunction.swift */; };
@@ -29,9 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E17F38EF1E2505390068CCA2 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		E19B7A5B1E2381350072A7C6 /* AnimationChainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationChainable.swift; sourceTree = "<group>"; };
 		E1D5FA2A1E23335D00422210 /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
-		E1D5FA2C1E2333A300422210 /* AnimationMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationMaker.swift; sourceTree = "<group>"; };
+		E1D5FA2C1E2333A300422210 /* AnimationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationAnimator.swift; sourceTree = "<group>"; };
 		E1D5FA2E1E2333B400422210 /* KeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeAnimation.swift; sourceTree = "<group>"; };
 		E1D5FA301E2333D300422210 /* AnimationGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationGroup.swift; sourceTree = "<group>"; };
 		E1D5FA321E23343A00422210 /* KeyframeAnimationFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeAnimationFunction.swift; sourceTree = "<group>"; };
@@ -85,8 +87,9 @@
 			children = (
 				E1DF761D1E2099CD00848102 /* Morph.h */,
 				E1D5FA2A1E23335D00422210 /* Attribute.swift */,
-				E1D5FA2C1E2333A300422210 /* AnimationMaker.swift */,
+				E1D5FA2C1E2333A300422210 /* AnimationAnimator.swift */,
 				E19B7A5B1E2381350072A7C6 /* AnimationChainable.swift */,
+				E17F38EF1E2505390068CCA2 /* Animatable.swift */,
 				E1D5FA2E1E2333B400422210 /* KeyframeAnimation.swift */,
 				E1D5FA301E2333D300422210 /* AnimationGroup.swift */,
 				E1D5FA321E23343A00422210 /* KeyframeAnimationFunction.swift */,
@@ -218,9 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D5FA331E23343A00422210 /* KeyframeAnimationFunction.swift in Sources */,
-				E1D5FA2D1E2333A300422210 /* AnimationMaker.swift in Sources */,
+				E1D5FA2D1E2333A300422210 /* AnimationAnimator.swift in Sources */,
 				E19B7A5C1E2381350072A7C6 /* AnimationChainable.swift in Sources */,
 				E1D5FA311E2333D300422210 /* AnimationGroup.swift in Sources */,
+				E17F38F01E2505390068CCA2 /* Animatable.swift in Sources */,
 				E1D5FA2F1E2333B400422210 /* KeyframeAnimation.swift in Sources */,
 				E1D5FA2B1E23335D00422210 /* Attribute.swift in Sources */,
 			);
@@ -393,6 +397,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4Y65NZLKET;
 				INFOPLIST_FILE = MorphTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.alvinzhu.MorphTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -406,6 +411,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4Y65NZLKET;
 				INFOPLIST_FILE = MorphTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.alvinzhu.MorphTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

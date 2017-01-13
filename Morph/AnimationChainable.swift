@@ -78,14 +78,6 @@ extension CGPoint: AnimationChainable {
     
 }
 
-extension NSNumber: AnimationChainable {
-    
-    public func boxValue() -> AnyObject {
-        return self
-    }
-    
-}
-
 extension UIColor: AnimationChainable {
     
     public func boxValue() -> AnyObject {
@@ -95,6 +87,14 @@ extension UIColor: AnimationChainable {
 }
 
 extension UIBezierPath: AnimationChainable {
+    
+    public func boxValue() -> AnyObject {
+        return self
+    }
+    
+}
+
+extension NSValue: AnimationChainable {
     
     public func boxValue() -> AnyObject {
         return self
