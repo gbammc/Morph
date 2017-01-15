@@ -318,19 +318,9 @@ fileprivate extension KeyframeAnimation {
             
             value = NSNumber(value: (f / 180 * M_PI))
             
-        } else if attribute == .scale, fabs(f) < DBL_EPSILON {
+        } else if (attribute == .scale || attribute == .scaleX || attribute == .scaleY), fabs(f) < DBL_EPSILON {
             
             value = NSNumber(value: DBL_EPSILON)
-            
-        } else if attribute == .scaleX {
-            
-            let transform = CATransform3DMakeScale(CGFloat(f), 1, 1)
-            value = NSValue(caTransform3D: transform)
-            
-        } else if attribute == .scaleY {
-            
-            let transform = CATransform3DMakeScale(1, CGFloat(f), 1)
-            value = NSValue(caTransform3D: transform)
             
         }
         
@@ -349,19 +339,9 @@ fileprivate extension KeyframeAnimation {
             
             value = NSNumber(value: (f / 180 * M_PI))
             
-        } else if attribute == .scale, fabs(f) < DBL_EPSILON {
+        } else if (attribute == .scale || attribute == .scaleX || attribute == .scaleY), fabs(f) < DBL_EPSILON {
             
             value = NSNumber(value: DBL_EPSILON)
-            
-        } else if attribute == .scaleX {
-            
-            let transform = CATransform3DMakeScale(CGFloat(f), 1, 1)
-            value = NSValue(caTransform3D: transform)
-            
-        } else if attribute == .scaleY {
-            
-            let transform = CATransform3DMakeScale(1, CGFloat(f), 1)
-            value = NSValue(caTransform3D: transform)
             
         } else if attribute == .xOffset {
             

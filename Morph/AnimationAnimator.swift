@@ -504,9 +504,15 @@ public extension AnimationAnimator {
                 animation.to(transform)
                 group.complectionAction = { (view, animation) in
                     if let view = view as? UIView {
-                        var transform = transformValue(for: animation)
-                        transform = CATransform3DMakeScale(transform.m11, transform.m22, view.layer.transform.m33)
-                        view.layer.transform = transform
+                        let scale = floatValue(for: animation)
+                        let oriTransform = view.layer.transform
+                        
+                        if fabs(oriTransform.m11 - scale) > CGFloat(FLT_EPSILON) ||
+                            fabs(oriTransform.m22 - scale) > CGFloat(FLT_EPSILON) {
+                            let scaledTransform = CATransform3DMakeScale(scale, scale, 1)
+                            
+                            view.layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
+                        }
                     }
                 }
                 
@@ -519,9 +525,15 @@ public extension AnimationAnimator {
                 animation.to(transform)
                 group.complectionAction = { (layer, animation) in
                     if let layer = layer as? CALayer {
-                        var transform = transformValue(for: animation)
-                        transform = CATransform3DMakeScale(transform.m11, transform.m22, layer.transform.m33)
-                        layer.transform = transform
+                        let scale = floatValue(for: animation)
+                        let oriTransform = layer.transform
+                        
+                        if fabs(oriTransform.m11 - scale) > CGFloat(FLT_EPSILON) ||
+                            fabs(oriTransform.m22 - scale) > CGFloat(FLT_EPSILON) {
+                            let scaledTransform = CATransform3DMakeScale(scale, scale, 1)
+                            
+                            layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
+                        }
                     }
                 }
                 
@@ -544,9 +556,14 @@ public extension AnimationAnimator {
                 animation.to(transform)
                 group.complectionAction = { (view, animation) in
                     if let view = view as? UIView {
-                        var transform = transformValue(for: animation)
-                        transform = CATransform3DMakeScale(transform.m11, view.layer.transform.m22, view.layer.transform.m33)
-                        view.layer.transform = transform
+                        let scale = floatValue(for: animation)
+                        let oriTransform = view.layer.transform
+                        
+                        if fabs(oriTransform.m11 - scale) > CGFloat(FLT_EPSILON) {
+                            let scaledTransform = CATransform3DMakeScale(scale, 1, 1)
+                            
+                            view.layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
+                        }
                     }
                 }
                 
@@ -559,9 +576,14 @@ public extension AnimationAnimator {
                 animation.to(transform)
                 group.complectionAction = { (layer, animation) in
                     if let layer = layer as? CALayer {
-                        var transform = transformValue(for: animation)
-                        transform = CATransform3DMakeScale(transform.m11, layer.transform.m22, layer.transform.m33)
-                        layer.transform = transform
+                        let scale = floatValue(for: animation)
+                        let oriTransform = layer.transform
+                        
+                        if fabs(oriTransform.m11 - scale) > CGFloat(FLT_EPSILON) {
+                            let scaledTransform = CATransform3DMakeScale(scale, 1, 1)
+                            
+                            layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
+                        }
                     }
                 }
                 
@@ -584,9 +606,14 @@ public extension AnimationAnimator {
                 animation.to(transform)
                 group.complectionAction = { (view, animation) in
                     if let view = view as? UIView {
-                        var transform = transformValue(for: animation)
-                        transform = CATransform3DMakeScale(view.layer.transform.m11, transform.m22, view.layer.transform.m33)
-                        view.layer.transform = transform
+                        let scale = floatValue(for: animation)
+                        let oriTransform = view.layer.transform
+                        
+                        if fabs(oriTransform.m22 - scale) > CGFloat(FLT_EPSILON) {
+                            let scaledTransform = CATransform3DMakeScale(1, scale, 1)
+                            
+                            view.layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
+                        }
                     }
                 }
                 
@@ -599,9 +626,14 @@ public extension AnimationAnimator {
                 animation.to(transform)
                 group.complectionAction = { (layer, animation) in
                     if let layer = layer as? CALayer {
-                        var transform = transformValue(for: animation)
-                        transform = CATransform3DMakeScale(layer.transform.m11, transform.m22, layer.transform.m33)
-                        layer.transform = transform
+                        let scale = floatValue(for: animation)
+                        let oriTransform = layer.transform
+                        
+                        if fabs(oriTransform.m22 - scale) > CGFloat(FLT_EPSILON) {
+                            let scaledTransform = CATransform3DMakeScale(1, scale, 1)
+                            
+                            layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
+                        }
                     }
                 }
                 
@@ -1239,25 +1271,6 @@ fileprivate func floatValue(for animation: KeyframeAnimation) -> CGFloat {
     
     if let value = value {
         result = CGFloat(value.doubleValue)
-    }
-    
-    return result
-}
-
-fileprivate func transformValue(for animation: KeyframeAnimation) -> CATransform3D {
-    var result = CATransform3DIdentity
-    var value: NSNumber?
-    
-    if let toValue = animation.toValue as? NSNumber {
-        value = toValue
-    } else if let lastValue = animation.values?.last as? NSNumber {
-        value = lastValue
-    }
-    
-    if let value = value {
-        let scale = CGFloat(value.doubleValue)
-        result.m11 = scale
-        result.m22 = scale
     }
     
     return result
