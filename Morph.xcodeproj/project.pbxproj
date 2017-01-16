@@ -170,7 +170,7 @@
 					E1DF76191E2099CD00848102 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4Y65NZLKET;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					E1DF76221E2099CD00848102 = {
@@ -401,7 +401,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.alvinzhu.MorphTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -415,7 +415,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.alvinzhu.MorphTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};

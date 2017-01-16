@@ -13,20 +13,20 @@ public typealias AnimationComplectionAction = (Animatable, KeyframeAnimation) ->
 
 open class AnimationAnimator {
     
-    let targetView: UIView?
+    public let targetView: UIView?
 
-    let targetLayer: CALayer?
+    public let targetLayer: CALayer?
     
-    var animations = [AnimationGroup]()
+    public var animations = [AnimationGroup]()
     
-    var logEnable = false
+    public var logEnable = false
     
-    init(view: UIView) {
+    public init(view: UIView) {
         targetView = view
         targetLayer = nil
     }
     
-    init(layer: CALayer) {
+    public init(layer: CALayer) {
         targetView = nil
         targetLayer = layer
     }
