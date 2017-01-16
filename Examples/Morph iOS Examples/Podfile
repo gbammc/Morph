@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'Morph iOS Examples' do
+  	pod 'Morph', :path => '../../Morph.podspec'
+end

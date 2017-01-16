@@ -1,0 +1,6 @@
+framework module Pods_Morph_iOS_Examples {
+  umbrella header "Pods-Morph iOS Examples-umbrella.h"
+
+  export *
+  module * { export * }
+}
