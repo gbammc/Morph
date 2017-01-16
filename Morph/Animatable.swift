@@ -6,7 +6,7 @@
 //  Copyright © 2017 Alvin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension UIView {
     

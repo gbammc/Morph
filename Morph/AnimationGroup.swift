@@ -59,7 +59,7 @@ public extension AnimationGroup {
         return self
     }
     
-    @discardableResult public func by(_ values: [AnyObject]) -> AnimationGroup {
+    @discardableResult public func by(_ values: [Any]) -> AnimationGroup {
         keyframeAnimations.last?.fromValue = nil
         keyframeAnimations.last?.toValue = nil
         keyframeAnimations.last?.by(values)

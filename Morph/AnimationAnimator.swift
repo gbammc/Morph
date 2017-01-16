@@ -6,7 +6,7 @@
 //  Copyright © 2017 Alvin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public typealias AnimationComplection = () -> Void
 public typealias AnimationComplectionAction = (Animatable, KeyframeAnimation) -> Void
@@ -18,6 +18,8 @@ open class AnimationAnimator {
     let targetLayer: CALayer?
     
     var animations = [AnimationGroup]()
+    
+    var logEnable = false
     
     init(view: UIView) {
         targetView = view
@@ -44,6 +46,10 @@ public extension AnimationAnimator {
             for animation in group.keyframeAnimations {
                 animation.calculate()
                 
+                if logEnable {
+                    log(animation)
+                }
+                
                 targetView?.layer.add(animation, forKey: nil)
                 targetLayer?.add(animation, forKey: nil)
             }
@@ -66,7 +72,7 @@ public extension AnimationAnimator {
     
     public var bounds: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .bounds)
+            let group = addAnimationGroup(.bounds)
             
             if let targetView = targetView {
                 
@@ -101,7 +107,7 @@ public extension AnimationAnimator {
     
     public var size: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .size)
+            let group = addAnimationGroup(.size)
             
             if let targetView = targetView {
                 
@@ -136,7 +142,7 @@ public extension AnimationAnimator {
     
     public var origin: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .origin)
+            let group = addAnimationGroup(.origin)
             
             if let targetView = targetView {
                 
@@ -170,7 +176,7 @@ public extension AnimationAnimator {
     
     public var center: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .center)
+            let group = addAnimationGroup(.center)
             
             if let targetView = targetView {
                 
@@ -202,7 +208,7 @@ public extension AnimationAnimator {
     
     public var x: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .x)
+            let group = addAnimationGroup(.x)
             
             if let targetView = targetView {
                 
@@ -234,7 +240,7 @@ public extension AnimationAnimator {
     
     public var y: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .y)
+            let group = addAnimationGroup(.y)
             
             if let targetView = targetView {
                 
@@ -266,7 +272,7 @@ public extension AnimationAnimator {
     
     public var width: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .width)
+            let group = addAnimationGroup(.width)
             
             if let targetView = targetView {
                 
@@ -299,7 +305,7 @@ public extension AnimationAnimator {
     
     public var height: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .height)
+            let group = addAnimationGroup(.height)
             
             if let targetView = targetView {
                 
@@ -332,7 +338,7 @@ public extension AnimationAnimator {
     
     public var opacity: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .opacity)
+            let group = addAnimationGroup(.opacity)
             
             if let targetView = targetView {
                 
@@ -364,7 +370,7 @@ public extension AnimationAnimator {
     
     public var backgroundColor: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .backgroundColor)
+            let group = addAnimationGroup(.backgroundColor)
             
             if let targetView = targetView {
                 
@@ -397,7 +403,7 @@ public extension AnimationAnimator {
     
     public var borderColor: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .borderColor)
+            let group = addAnimationGroup(.borderColor)
             
             if let targetView = targetView {
                 
@@ -429,7 +435,7 @@ public extension AnimationAnimator {
     
     public var borderWidth: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .borderWidth)
+            let group = addAnimationGroup(.borderWidth)
             
             if let targetView = targetView {
                 
@@ -461,7 +467,7 @@ public extension AnimationAnimator {
     
     public var cornerRadius: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .cornerRadius)
+            let group = addAnimationGroup(.cornerRadius)
             
             if let targetView = targetView {
                 
@@ -493,7 +499,7 @@ public extension AnimationAnimator {
     
     public var scale: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .scale)
+            let group = addAnimationGroup(.scale)
             
             if let targetView = targetView {
                 
@@ -545,7 +551,7 @@ public extension AnimationAnimator {
     
     public var scaleX: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .scaleX)
+            let group = addAnimationGroup(.scaleX)
             
             if let targetView = targetView {
                 
@@ -595,7 +601,7 @@ public extension AnimationAnimator {
     
     public var scaleY: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .scaleY)
+            let group = addAnimationGroup(.scaleY)
             
             if let targetView = targetView {
                 
@@ -645,7 +651,7 @@ public extension AnimationAnimator {
     
     public var anchor: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .anchor)
+            let group = addAnimationGroup(.anchor)
             
             if let targetView = targetView {
                 
@@ -713,7 +719,7 @@ public extension AnimationAnimator {
     
     public var rotateX: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .rotateX)
+            let group = addAnimationGroup(.rotateX)
             
             if let targetView = targetView {
                 
@@ -749,7 +755,7 @@ public extension AnimationAnimator {
     
     public var rotateY: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .rotateY)
+            let group = addAnimationGroup(.rotateY)
             
             if let targetView = targetView {
                 
@@ -785,7 +791,7 @@ public extension AnimationAnimator {
     
     public var rotateZ: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .rotateZ)
+            let group = addAnimationGroup(.rotateZ)
             
             if let targetView = targetView {
                 targetView.layer.allowsEdgeAntialiasing = true
@@ -829,7 +835,7 @@ public extension AnimationAnimator {
     
     public var xOffset: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .xOffset)
+            let group = addAnimationGroup(.xOffset)
             
             if let targetView = targetView {
                 
@@ -861,7 +867,7 @@ public extension AnimationAnimator {
     
     public var yOffset: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .yOffset)
+            let group = addAnimationGroup(.yOffset)
             
             if let targetView = targetView {
                 
@@ -893,7 +899,7 @@ public extension AnimationAnimator {
     
     public var widthOffset: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .widthOffset)
+            let group = addAnimationGroup(.widthOffset)
             
             if let targetView = targetView {
                 
@@ -926,7 +932,7 @@ public extension AnimationAnimator {
     
     public var heightOffset: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .heightOffset)
+            let group = addAnimationGroup(.heightOffset)
             
             if let targetView = targetView {
                 
@@ -959,7 +965,7 @@ public extension AnimationAnimator {
     
     public var path: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .bezierPath)
+            let group = addAnimationGroup(.bezierPath)
             
             if let _ = targetView {
                 
@@ -985,7 +991,7 @@ public extension AnimationAnimator {
     
     public var rotateOnPath: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .bezierPath)
+            let group = addAnimationGroup(.bezierPath)
             group.keyframeAnimations.last?.rotationMode = kCAAnimationRotateAuto
             
             if let _ = targetView {
@@ -1012,7 +1018,7 @@ public extension AnimationAnimator {
     
     public var reverseRotateOnPath: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .bezierPath)
+            let group = addAnimationGroup(.bezierPath)
             group.keyframeAnimations.last?.rotationMode = kCAAnimationRotateAutoReverse
             
             if let _ = targetView {
@@ -1039,7 +1045,7 @@ public extension AnimationAnimator {
     
     public var fillColor: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .fillColor)
+            let group = addAnimationGroup(.fillColor)
             
             if let targetLayer = targetLayer as? CAShapeLayer {
                 
@@ -1062,7 +1068,7 @@ public extension AnimationAnimator {
     
     public var strokeColor: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .strokeColor)
+            let group = addAnimationGroup(.strokeColor)
             
             if let targetLayer = targetLayer as? CAShapeLayer {
                 
@@ -1085,7 +1091,7 @@ public extension AnimationAnimator {
     
     public var strokeStart: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .strokeStart)
+            let group = addAnimationGroup(.strokeStart)
             
             if let targetLayer = targetLayer as? CAShapeLayer {
                 
@@ -1108,7 +1114,7 @@ public extension AnimationAnimator {
     
     public var strokeEnd: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .strokeEnd)
+            let group = addAnimationGroup(.strokeEnd)
             
             if let targetLayer = targetLayer as? CAShapeLayer {
                 
@@ -1131,7 +1137,7 @@ public extension AnimationAnimator {
     
     public var lineWidth: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .lineWidth)
+            let group = addAnimationGroup(.lineWidth)
             
             if let targetLayer = targetLayer as? CAShapeLayer {
                 
@@ -1154,7 +1160,7 @@ public extension AnimationAnimator {
     
     public var miterLimit: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .miterLimit)
+            let group = addAnimationGroup(.miterLimit)
             
             if let targetLayer = targetLayer as? CAShapeLayer {
                 
@@ -1177,7 +1183,7 @@ public extension AnimationAnimator {
     
     public var lineDashPhase: AnimationGroup {
         get {
-            let group = AnimationGroup(attribute: .lineDashPhase)
+            let group = addAnimationGroup(.lineDashPhase)
             
             if let targetLayer = targetLayer as? CAShapeLayer {
                 
@@ -1206,9 +1212,13 @@ fileprivate extension AnimationAnimator {
         let group = AnimationGroup(attribute: attribute)
         
         if let targetView = targetView {
+            
             group.layer = targetView.layer
+            
         } else if let targetLayer = targetLayer {
+            
             group.layer = targetLayer
+            
         }
         
         animations.append(group)

@@ -24,10 +24,18 @@ open class KeyframeAnimation: CAKeyframeAnimation {
     
     // MARK: Lifecycle
     
+    override init() {
+        attribute = .none
+        
+        super.init()
+    }
+    
     public init(attribute: Attribute) {
         self.attribute = attribute
         
         super.init()
+        
+        keyPath = attribute.keyPath
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -46,7 +54,7 @@ open class KeyframeAnimation: CAKeyframeAnimation {
         return self
     }
     
-    @discardableResult open func by(_ values: [AnyObject]) -> KeyframeAnimation {
+    @discardableResult open func by(_ values: [Any]) -> KeyframeAnimation {
         self.values = values
         
         return self
@@ -493,19 +501,19 @@ fileprivate extension KeyframeAnimation {
         return path
     }
     
-    fileprivate func colorArray(from redValues: [NSNumber], greenValues: [NSNumber], blueValues: [NSNumber], alphaValues: [NSNumber]) -> [UIColor] {
+    fileprivate func colorArray(from redValues: [NSNumber], greenValues: [NSNumber], blueValues: [NSNumber], alphaValues: [NSNumber]) -> [CGColor] {
         
         assert(redValues.count > 0)
         
         let countOfColors = redValues.count
-        var values = [UIColor]()
+        var values = [CGColor]()
         
         for i in 1..<countOfColors {
             let value = UIColor(red: CGFloat(redValues[i].doubleValue),
                                 green: CGFloat(greenValues[i].doubleValue),
                                 blue: CGFloat(blueValues[i].doubleValue),
                                 alpha: CGFloat(alphaValues[i].doubleValue))
-            values.append(value)
+            values.append(value.cgColor)
         }
         
         return values
