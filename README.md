@@ -1,6 +1,6 @@
 # Morph
 
-[![Version](https://img.shields.io/cocoapods/v/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph) [![License](https://img.shields.io/cocoapods/l/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph) [![Platform](https://img.shields.io/cocoapods/p/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph)
+[![Version](https://img.shields.io/cocoapods/v/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph) [![License](https://img.shields.io/cocoapods/l/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph) [![Platform](https://img.shields.io/cocoapods/p/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) ![Xcode 8.2+](https://img.shields.io/badge/Xcode-8.2%2B-blue.svg) ![iOS 8.0+](https://img.shields.io/badge/iOS-8.0%2B-blue.svg)
 
 ## Introduction
 
@@ -18,7 +18,7 @@ radiation.mr_startAnimations(closure: { (animate) in
     animate.opacity.from(1).to(0).animate(duration)
     animate.scale.from(1).to(0).animate(duration)
     animate.center.from(fromPoint).to(toPoint).animate(duration)
-}, completion: { 
+}, completion: {
     radiation.removeFromSuperlayer()
 })
 
@@ -26,7 +26,7 @@ radiation.mr_startAnimations(closure: { (animate) in
 circle.mr_startAnimations(closure: { (animate) in
     animate.scale.by([0.8, scale, scale]).during([0, 0.5, 1.0]).animate(duration)
     animate.opacity.from(0.5).to(0).animate(duration)
-}, completion: { 
+}, completion: {
     circle.removeFromSuperlayer()
 })
 ```
