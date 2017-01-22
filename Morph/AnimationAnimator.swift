@@ -967,16 +967,18 @@ public extension AnimationAnimator {
         get {
             let group = addAnimationGroup(.bezierPath)
             
-            if let _ = targetView {
+            if let targetView = targetView {
                 
+                targetView.layer.allowsEdgeAntialiasing = true
                 group.complectionAction = { (view, animation) in
                     if let view = view as? UIView, let path = bezierPath(for: animation) {
                         view.layer.position = path.currentPoint
                     }
                 }
                 
-            } else if let _ = targetLayer {
+            } else if let targetLayer = targetLayer {
                 
+                targetLayer.allowsEdgeAntialiasing = true
                 group.complectionAction = { (layer, animation) in
                     if let layer = layer as? CALayer, let path = bezierPath(for: animation) {
                         layer.position = path.currentPoint
@@ -991,26 +993,8 @@ public extension AnimationAnimator {
     
     public var rotateOnPath: AnimationGroup {
         get {
-            let group = addAnimationGroup(.bezierPath)
+            let group = self.path
             group.keyframeAnimations.last?.rotationMode = kCAAnimationRotateAuto
-            
-            if let _ = targetView {
-                
-                group.complectionAction = { (view, animation) in
-                    if let view = view as? UIView, let path = bezierPath(for: animation) {
-                        view.layer.position = path.currentPoint
-                    }
-                }
-                
-            } else if let _ = targetLayer {
-                
-                group.complectionAction = { (layer, animation) in
-                    if let layer = layer as? CALayer, let path = bezierPath(for: animation) {
-                        layer.position = path.currentPoint
-                    }
-                }
-                
-            }
             
             return group
         }
@@ -1018,26 +1002,8 @@ public extension AnimationAnimator {
     
     public var reverseRotateOnPath: AnimationGroup {
         get {
-            let group = addAnimationGroup(.bezierPath)
+            let group = self.path
             group.keyframeAnimations.last?.rotationMode = kCAAnimationRotateAutoReverse
-            
-            if let _ = targetView {
-                
-                group.complectionAction = { (view, animation) in
-                    if let view = view as? UIView, let path = bezierPath(for: animation) {
-                        view.layer.position = path.currentPoint
-                    }
-                }
-                
-            } else if let _ = targetLayer {
-
-                group.complectionAction = { (layer, animation) in
-                    if let layer = layer as? CALayer, let path = bezierPath(for: animation) {
-                        layer.position = path.currentPoint
-                    }
-                }
-                
-            }
             
             return group
         }
@@ -1250,7 +1216,9 @@ fileprivate extension AnimationAnimator {
     }
     
     fileprivate func log(_ animation: KeyframeAnimation) {
-        if let fromValue = animation.fromValue, let toValue = animation.toValue {
+        if let path = animation.toValue as? UIBezierPath {
+            dump("keyPath: \(animation.keyPath ?? ""), currentPoint: \(path.currentPoint), duration: \(animation.duration)")
+        } else if let fromValue = animation.fromValue, let toValue = animation.toValue {
             dump("keyPath: \(animation.keyPath ?? ""), fromValue: \(fromValue), toValue: \(toValue), duration: \(animation.duration)")
         } else {
             dump("keyPath: \(animation.keyPath ?? ""), values: \(animation.values), keyTimes: \(animation.keyTimes)")

@@ -371,6 +371,10 @@ fileprivate extension KeyframeAnimation {
             let newHeight = Double(self.layer?.bounds.size.height ?? 0) + f
             value = NSNumber(value: newHeight)
             
+        } else if attribute == .bezierPath, let bezierPath = value as? UIBezierPath {
+            
+            path = bezierPath.cgPath
+            
         }
         
         return value
