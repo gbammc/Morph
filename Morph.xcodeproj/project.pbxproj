@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E17F38F01E2505390068CCA2 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F38EF1E2505390068CCA2 /* Animatable.swift */; };
 		E19B7A5C1E2381350072A7C6 /* AnimationChainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B7A5B1E2381350072A7C6 /* AnimationChainable.swift */; };
+		E1CC508B1E35CFD700B83BDA /* AnimationAnimator+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC508A1E35CFD700B83BDA /* AnimationAnimator+Properties.swift */; };
+		E1CC508D1E35D71900B83BDA /* KeyframeAnimation+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC508C1E35D71900B83BDA /* KeyframeAnimation+Effects.swift */; };
 		E1D5FA2B1E23335D00422210 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA2A1E23335D00422210 /* Attribute.swift */; };
 		E1D5FA2D1E2333A300422210 /* AnimationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA2C1E2333A300422210 /* AnimationAnimator.swift */; };
 		E1D5FA2F1E2333B400422210 /* KeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5FA2E1E2333B400422210 /* KeyframeAnimation.swift */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		E17F38EF1E2505390068CCA2 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		E19B7A5B1E2381350072A7C6 /* AnimationChainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationChainable.swift; sourceTree = "<group>"; };
+		E1CC508A1E35CFD700B83BDA /* AnimationAnimator+Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimationAnimator+Properties.swift"; sourceTree = "<group>"; };
+		E1CC508C1E35D71900B83BDA /* KeyframeAnimation+Effects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeyframeAnimation+Effects.swift"; sourceTree = "<group>"; };
 		E1D5FA2A1E23335D00422210 /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 		E1D5FA2C1E2333A300422210 /* AnimationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationAnimator.swift; sourceTree = "<group>"; };
 		E1D5FA2E1E2333B400422210 /* KeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeAnimation.swift; sourceTree = "<group>"; };
@@ -88,9 +92,11 @@
 				E1DF761D1E2099CD00848102 /* Morph.h */,
 				E1D5FA2A1E23335D00422210 /* Attribute.swift */,
 				E1D5FA2C1E2333A300422210 /* AnimationAnimator.swift */,
+				E1CC508A1E35CFD700B83BDA /* AnimationAnimator+Properties.swift */,
 				E19B7A5B1E2381350072A7C6 /* AnimationChainable.swift */,
 				E17F38EF1E2505390068CCA2 /* Animatable.swift */,
 				E1D5FA2E1E2333B400422210 /* KeyframeAnimation.swift */,
+				E1CC508C1E35D71900B83BDA /* KeyframeAnimation+Effects.swift */,
 				E1D5FA301E2333D300422210 /* AnimationGroup.swift */,
 				E1D5FA321E23343A00422210 /* KeyframeAnimationFunction.swift */,
 				E1DF761E1E2099CD00848102 /* Info.plist */,
@@ -220,6 +226,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CC508D1E35D71900B83BDA /* KeyframeAnimation+Effects.swift in Sources */,
+				E1CC508B1E35CFD700B83BDA /* AnimationAnimator+Properties.swift in Sources */,
 				E1D5FA331E23343A00422210 /* KeyframeAnimationFunction.swift in Sources */,
 				E1D5FA2D1E2333A300422210 /* AnimationAnimator.swift in Sources */,
 				E19B7A5C1E2381350072A7C6 /* AnimationChainable.swift in Sources */,

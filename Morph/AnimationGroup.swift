@@ -12,10 +12,13 @@ open class AnimationGroup: CAAnimationGroup {
     
     // MARK: Attributes
     
+    /// The attribute that specify what kind of animation should be applied.
     public let attribute: Attribute
     
+    /// The array of the animations.
     public var keyframeAnimations = [KeyframeAnimation]()
     
+    /// The layer that apply the animations.
     public weak var layer: CALayer? {
         didSet {
             for animation in keyframeAnimations {
@@ -24,10 +27,14 @@ open class AnimationGroup: CAAnimationGroup {
         }
     }
     
+    /// The block that executed after all animations are completed.
     public var complectionAction: AnimationComplectionAction?
     
     // MARK: Lifecycle
     
+    /// Initializes a new `AnimationGroup` object.
+    ///
+    /// - Parameter attribute: Specify what kind of animation should be applied.
     public init(attribute: Attribute) {
         self.attribute = attribute
         
