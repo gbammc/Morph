@@ -1,6 +1,6 @@
 # Morph
 
-[![Version](https://img.shields.io/cocoapods/v/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph) [![License](https://img.shields.io/cocoapods/l/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph) [![Platform](https://img.shields.io/cocoapods/p/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) ![Xcode 8.2+](https://img.shields.io/badge/Xcode-8.2%2B-blue.svg) ![iOS 8.0+](https://img.shields.io/badge/iOS-8.0%2B-blue.svg)
+[![Version](https://img.shields.io/cocoapods/v/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph) [![License](https://img.shields.io/cocoapods/l/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph) [![Platform](https://img.shields.io/cocoapods/p/Morph.svg?style=flat)](http://cocoapods.org/pods/Morph) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) ![Xcode 8.2+](https://img.shields.io/badge/Xcode-8.2%2B-blue.svg) ![iOS 8.0+](https://img.shields.io/badge/iOS-8.0%2B-blue.svg) [![Language Swift 3](https://img.shields.io/badge/Language-Swift%203.0.1-orange.svg)](https://swift.org)
 
 ## Introduction
 
@@ -10,10 +10,10 @@ Morph wraps CoreAnimation with a nicer syntax to help you build up awesome anima
 
 ![demo](/Resources/demo.gif?raw=true)
 
-To implement above layer effect, all you need to write down:
+To implement above layer effect, all you need to code:
 
 ```swift
-// radiation
+// Radiation
 radiation.mr_startAnimations(closure: { (animate) in
     animate.opacity.from(1).to(0).animate(duration)
     animate.scale.from(1).to(0).animate(duration)
@@ -22,7 +22,7 @@ radiation.mr_startAnimations(closure: { (animate) in
     radiation.removeFromSuperlayer()
 })
 
-// Animate the background circle
+// Background circle
 circle.mr_startAnimations(closure: { (animate) in
     animate.scale.by([0.8, scale, scale]).during([0, 0.5, 1.0]).animate(duration)
     animate.opacity.from(0.5).to(0).animate(duration)
@@ -35,11 +35,20 @@ Check out the __Morph iOS Examples__ to get more details.
 
 ## Installation
 
-Morph is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Cocoapods
+
+Morph is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod "Morph"
+```
+
+### Carthage
+
+You also can use [Carthage](https://github.com/Carthage/Carthage) to install Morph by adding that to your Cartfile:
+
+```ruby
+github "gbammc/Morph"
 ```
 
 ## Getting started
@@ -75,20 +84,20 @@ view.mr_startAnimations(closure: { (animate) in
 | borderColor | borderColor |
 | borderWidth | borderWidth |
 | cornerRadius | cornerRadius |
-| scale | transform.scale |
-| scaleX | transform.scale.x |
-| scaleY | transform.scale.y |
 | anchor | anchorPoint |
-| rotateX | transform.rotation.x |
-| rotateY | transform.rotation.y |
-| rotateZ | transform.rotation.z |
-| rotate | transform.rotation.z |
 | path | position |
 
 #### Advance attributes
 
 | Attribute | keyPath | Description |
 |-----------|---------|-------------|
+| scale | transform.scale |  Idempotent |
+| scaleX | transform.scale.x | Idempotent |
+| scaleY | transform.scale.y | Idempotent |
+| rotateX | transform.rotation.x | Accept degree value. Idempotent |
+| rotateY | transform.rotation.y | Accept degree value. Idempotent |
+| rotateZ | transform.rotation.z | Accept degree value. Idempotent |
+| rotate | transform.rotation.z | The same as ```rotateZ``` |
 | xOffset | position.x | Increase / decrease origin x by specific value |
 | yOffset | position.y | Increase / decrease origin y by specific value |
 | heightOffset | bounds.size.width | Increase / decrease width by specific value |
@@ -150,7 +159,7 @@ keyframeAnimation.duration = duration;
 
 ### Debug
 
-Set ```logEnable``` to ```YES``` will print all animations details for you to debug.
+Set ```logEnable``` to ```true``` will print the animations details for you to debug.
 
 ```swift
 animate.logEnable = true
