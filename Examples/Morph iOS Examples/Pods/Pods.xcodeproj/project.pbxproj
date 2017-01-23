@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		178C967DBB6F646207E305070C752CE4 /* Morph-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAFAAB2BC98905366C3025F9A63400A1 /* Morph-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02EBB624F57E97E4CEBF5E0A5E5C1B09 /* KeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D21BC036B1F6FC91188C27796179E08 /* KeyframeAnimationFunction.swift */; };
+		0B4E1FBF46C9D28608A135B98E11F047 /* Morph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80410060D3E11FA7D74CB98351B655F0 /* Morph-dummy.m */; };
 		1985F60CC4F69F115E4EF6BFFA7A6F29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		2B619750FD8AB5B087690044BDB0D579 /* AnimationChainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F903EC5DCA387405A3219166D3C2AA /* AnimationChainable.swift */; };
-		2B8E7AFC31CA0595DB13982C0AA99ACF /* KeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0539C5A00E5FB2BBFE23F1877D8744A4 /* KeyframeAnimation.swift */; };
 		2F922E2A8BB530D13B9DA43572B86CBD /* Pods-Morph iOS Examples-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4A2141650EE673CF610549BB0C90A6 /* Pods-Morph iOS Examples-dummy.m */; };
-		40E506113E2EE0C5F44A9819FC512D7A /* Morph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D778E9B4B0AEF41C7624D5C5EFD2B77F /* Morph-dummy.m */; };
+		307DA1895AA72DB7C2F93B9EF210821D /* AnimationAnimator+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B43CCCF2F7608F92CEAEBAD65AA78C /* AnimationAnimator+Properties.swift */; };
+		325566022FFF6F585F4ABA164DCD1FAF /* KeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62877D83D0680DAB18034E0B807CB090 /* KeyframeAnimation.swift */; };
+		475ACF2390B1B74FDF293FF01ED36516 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		493171B26C018FB57CE2AF8E286A3B2C /* Morph-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0C0D19CE4DC7383AD069357527F968C /* Morph-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C310576E9BA2D621681057BF300ABE4 /* Morph.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B1A89DABA99D86A0D4FA967647E3345 /* Morph.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4EDE5824309492083CE2C97C358407B2 /* Pods-Morph iOS Examples-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 024F2EDE762031E2F2D938C920E5AB25 /* Pods-Morph iOS Examples-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D8A550BB30932BAC512B60417EF94E1 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E805CDFD1909B5CB46622112435150A2 /* Attribute.swift */; };
-		6D8DE6C813C890EE2CEF1C8135EE8B75 /* AnimationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA33A548C1F71B15CE488D3A0D35C02 /* AnimationGroup.swift */; };
-		9750C6110A6618065D462041331C326C /* KeyframeAnimationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B975B54D97B5CE6B5B5F663F1094F733 /* KeyframeAnimationFunction.swift */; };
-		A5F9E66B5AF3C0DAE02F89636196A5A6 /* AnimationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEDA2E29E8BDD01A29FD6CE396E47CB /* AnimationAnimator.swift */; };
-		B9B7EB7A810520DD61616A314B7C87D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		C2493C719210E782A98E8C96BFA27172 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
-		CF7A7E7733FAF20C3DF6FB6EBE712A14 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F1DEC165207BDE2688772236FD43B /* Animatable.swift */; };
-		D5A9FE13ABB2FAC98BF2A6D83C147D55 /* Morph.h in Headers */ = {isa = PBXBuildFile; fileRef = DF84FE86A09222627289370DDB118AF8 /* Morph.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52EBEC8A110272371F403A6EB4C85C89 /* AnimationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F78237E3D573031BFA1B0C997496EA /* AnimationGroup.swift */; };
+		53182DB0E01DA0D0A625A24BBA878489 /* AnimationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B170C2B3C4EB599DA0E8DD497E692260 /* AnimationAnimator.swift */; };
+		5AF3D02B841912F8D77CEFB10975B1E0 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDC3C5819F53ABA16B11A7F6E3B626E /* Attribute.swift */; };
+		8950EFD522957CA8EA33FF9B82C71300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		90543B409FC1075B631A18C0126D5EDA /* AnimationChainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD57450C79B94806CAE25D30CC2F4567 /* AnimationChainable.swift */; };
+		C32D177C65D9DB3AFEB3F064C5B5C2D2 /* KeyframeAnimation+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0BB5C0B0F67E1099A12C85F6254B72 /* KeyframeAnimation+Effects.swift */; };
+		FD6E2CE6DD1E5C15C7E163B6DDCC7FDA /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8907065B97450D14CFE12212C25051D /* Animatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,40 +31,42 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 310EA1319E18FC92FF8C158106107294;
+			remoteGlobalIDString = 82A2DF07D1786B00337334DB3FB9906D;
 			remoteInfo = Morph;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0185B97501FCCD1930F8AEA2D191F761 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		024F2EDE762031E2F2D938C920E5AB25 /* Pods-Morph iOS Examples-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Morph iOS Examples-umbrella.h"; sourceTree = "<group>"; };
-		0539C5A00E5FB2BBFE23F1877D8744A4 /* KeyframeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyframeAnimation.swift; sourceTree = "<group>"; };
-		18B91D7E4D1B6F79A3EFF2256CCE4B66 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B6CB44F3DA5E159524088579138B33A /* Morph.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Morph.xcconfig; sourceTree = "<group>"; };
+		1D21BC036B1F6FC91188C27796179E08 /* KeyframeAnimationFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyframeAnimationFunction.swift; sourceTree = "<group>"; };
+		263C89F00524C4CE4EA3CBFCEF1991F6 /* Morph-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Morph-prefix.pch"; sourceTree = "<group>"; };
 		27C19152E7E8BD4BA2BD18FB0455D55B /* Morph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Morph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		294214395337241D5A80BBC09ACF0C33 /* Pods-Morph iOS Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Morph iOS Examples.debug.xcconfig"; sourceTree = "<group>"; };
-		299F1DEC165207BDE2688772236FD43B /* Animatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		39BE97540155E6605AEAB7BD52542241 /* Pods-Morph iOS Examples-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Morph iOS Examples-acknowledgements.markdown"; sourceTree = "<group>"; };
-		54F903EC5DCA387405A3219166D3C2AA /* AnimationChainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimationChainable.swift; sourceTree = "<group>"; };
+		3B1A89DABA99D86A0D4FA967647E3345 /* Morph.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Morph.h; sourceTree = "<group>"; };
+		62877D83D0680DAB18034E0B807CB090 /* KeyframeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyframeAnimation.swift; sourceTree = "<group>"; };
 		64FC0765B2ED45DDD7E7DCA318CC264F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DCBCA1ADFAD9A8B62B7D47430A320D9 /* Morph-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Morph-prefix.pch"; sourceTree = "<group>"; };
-		79FD853E9911DD94F2999FD2FA50C803 /* Morph.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Morph.modulemap; sourceTree = "<group>"; };
+		80410060D3E11FA7D74CB98351B655F0 /* Morph-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Morph-dummy.m"; sourceTree = "<group>"; };
 		8A24B6085557B1DFCF45EA77ED5985CA /* Pods-Morph iOS Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Morph iOS Examples.release.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2025D33629F3CEBFA51B7910BBF3EFD /* Pods-Morph iOS Examples-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Morph iOS Examples-resources.sh"; sourceTree = "<group>"; };
 		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A78D9EC1BDBA816AEB66B234EB3E94A8 /* Pods-Morph iOS Examples-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Morph iOS Examples-acknowledgements.plist"; sourceTree = "<group>"; };
+		B170C2B3C4EB599DA0E8DD497E692260 /* AnimationAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimationAnimator.swift; sourceTree = "<group>"; };
 		B2FE3C240FF1A734374CB1FABDFE524C /* Pods-Morph iOS Examples-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Morph iOS Examples-frameworks.sh"; sourceTree = "<group>"; };
+		B4B43CCCF2F7608F92CEAEBAD65AA78C /* AnimationAnimator+Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "AnimationAnimator+Properties.swift"; sourceTree = "<group>"; };
+		B4C6E23990780D236A16D516047EE067 /* Morph.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Morph.modulemap; sourceTree = "<group>"; };
 		B7768FB9444C985F01173AB64A1CC555 /* Pods-Morph iOS Examples.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Morph iOS Examples.modulemap"; sourceTree = "<group>"; };
-		B975B54D97B5CE6B5B5F663F1094F733 /* KeyframeAnimationFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyframeAnimationFunction.swift; sourceTree = "<group>"; };
-		D778E9B4B0AEF41C7624D5C5EFD2B77F /* Morph-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Morph-dummy.m"; sourceTree = "<group>"; };
-		DBA33A548C1F71B15CE488D3A0D35C02 /* AnimationGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimationGroup.swift; sourceTree = "<group>"; };
+		BA0BB5C0B0F67E1099A12C85F6254B72 /* KeyframeAnimation+Effects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "KeyframeAnimation+Effects.swift"; sourceTree = "<group>"; };
+		BFEA9B54530B5D432B7F2BAC264FF4B8 /* Morph.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Morph.xcconfig; sourceTree = "<group>"; };
+		C2F78237E3D573031BFA1B0C997496EA /* AnimationGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimationGroup.swift; sourceTree = "<group>"; };
+		CDDC3C5819F53ABA16B11A7F6E3B626E /* Attribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		D0C0D19CE4DC7383AD069357527F968C /* Morph-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Morph-umbrella.h"; sourceTree = "<group>"; };
+		DD57450C79B94806CAE25D30CC2F4567 /* AnimationChainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimationChainable.swift; sourceTree = "<group>"; };
 		DF4A2141650EE673CF610549BB0C90A6 /* Pods-Morph iOS Examples-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Morph iOS Examples-dummy.m"; sourceTree = "<group>"; };
-		DF84FE86A09222627289370DDB118AF8 /* Morph.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Morph.h; sourceTree = "<group>"; };
-		E805CDFD1909B5CB46622112435150A2 /* Attribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		EDEDA2E29E8BDD01A29FD6CE396E47CB /* AnimationAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimationAnimator.swift; sourceTree = "<group>"; };
-		FAFAAB2BC98905366C3025F9A63400A1 /* Morph-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Morph-umbrella.h"; sourceTree = "<group>"; };
+		E8907065B97450D14CFE12212C25051D /* Animatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		FED9415F7F30D4CEA15076698DDA1F81 /* Pods_Morph_iOS_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morph_iOS_Examples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,31 +79,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92876091D44CD43B173CA3B5482560AA /* Frameworks */ = {
+		57B39C673BD03B11B4F510098855AE38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9B7EB7A810520DD61616A314B7C87D7 /* Foundation.framework in Frameworks */,
-				C2493C719210E782A98E8C96BFA27172 /* UIKit.framework in Frameworks */,
+				475ACF2390B1B74FDF293FF01ED36516 /* Foundation.framework in Frameworks */,
+				8950EFD522957CA8EA33FF9B82C71300 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CDA0A26141A94D0DA4A3723941E6241 /* Morph */ = {
+		070B13C12CECC017C8BA5DB924ED0AF2 /* Morph */ = {
 			isa = PBXGroup;
 			children = (
-				299F1DEC165207BDE2688772236FD43B /* Animatable.swift */,
-				EDEDA2E29E8BDD01A29FD6CE396E47CB /* AnimationAnimator.swift */,
-				54F903EC5DCA387405A3219166D3C2AA /* AnimationChainable.swift */,
-				DBA33A548C1F71B15CE488D3A0D35C02 /* AnimationGroup.swift */,
-				E805CDFD1909B5CB46622112435150A2 /* Attribute.swift */,
-				0539C5A00E5FB2BBFE23F1877D8744A4 /* KeyframeAnimation.swift */,
-				B975B54D97B5CE6B5B5F663F1094F733 /* KeyframeAnimationFunction.swift */,
-				DF84FE86A09222627289370DDB118AF8 /* Morph.h */,
+				D6F0873012B28AB17B5386D4B56FFE2A /* Morph */,
+				D8AB6EE921C94190202D2123E29C5D75 /* Support Files */,
 			);
-			path = Morph;
+			name = Morph;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -118,16 +117,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5271DCA6E8770A992A6929786A762C87 /* Morph */ = {
-			isa = PBXGroup;
-			children = (
-				0CDA0A26141A94D0DA4A3723941E6241 /* Morph */,
-				E4F3997C93D9BE8859261214BF9A0C22 /* Support Files */,
-			);
-			name = Morph;
-			path = ../../..;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +131,7 @@
 		B0F9AA5C3CBFE709BF131D396258D3FD /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5271DCA6E8770A992A6929786A762C87 /* Morph */,
+				070B13C12CECC017C8BA5DB924ED0AF2 /* Morph */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -154,6 +143,37 @@
 				FED9415F7F30D4CEA15076698DDA1F81 /* Pods_Morph_iOS_Examples.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D6F0873012B28AB17B5386D4B56FFE2A /* Morph */ = {
+			isa = PBXGroup;
+			children = (
+				E8907065B97450D14CFE12212C25051D /* Animatable.swift */,
+				B170C2B3C4EB599DA0E8DD497E692260 /* AnimationAnimator.swift */,
+				B4B43CCCF2F7608F92CEAEBAD65AA78C /* AnimationAnimator+Properties.swift */,
+				DD57450C79B94806CAE25D30CC2F4567 /* AnimationChainable.swift */,
+				C2F78237E3D573031BFA1B0C997496EA /* AnimationGroup.swift */,
+				CDDC3C5819F53ABA16B11A7F6E3B626E /* Attribute.swift */,
+				62877D83D0680DAB18034E0B807CB090 /* KeyframeAnimation.swift */,
+				BA0BB5C0B0F67E1099A12C85F6254B72 /* KeyframeAnimation+Effects.swift */,
+				1D21BC036B1F6FC91188C27796179E08 /* KeyframeAnimationFunction.swift */,
+				3B1A89DABA99D86A0D4FA967647E3345 /* Morph.h */,
+			);
+			path = Morph;
+			sourceTree = "<group>";
+		};
+		D8AB6EE921C94190202D2123E29C5D75 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0185B97501FCCD1930F8AEA2D191F761 /* Info.plist */,
+				B4C6E23990780D236A16D516047EE067 /* Morph.modulemap */,
+				BFEA9B54530B5D432B7F2BAC264FF4B8 /* Morph.xcconfig */,
+				80410060D3E11FA7D74CB98351B655F0 /* Morph-dummy.m */,
+				263C89F00524C4CE4EA3CBFCEF1991F6 /* Morph-prefix.pch */,
+				D0C0D19CE4DC7383AD069357527F968C /* Morph-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Examples/Morph iOS Examples/Pods/Target Support Files/Morph";
 			sourceTree = "<group>";
 		};
 		E2D49966C4C322798D506B2723649BDE /* Pods-Morph iOS Examples */ = {
@@ -174,20 +194,6 @@
 			path = "Target Support Files/Pods-Morph iOS Examples";
 			sourceTree = "<group>";
 		};
-		E4F3997C93D9BE8859261214BF9A0C22 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				18B91D7E4D1B6F79A3EFF2256CCE4B66 /* Info.plist */,
-				79FD853E9911DD94F2999FD2FA50C803 /* Morph.modulemap */,
-				1B6CB44F3DA5E159524088579138B33A /* Morph.xcconfig */,
-				D778E9B4B0AEF41C7624D5C5EFD2B77F /* Morph-dummy.m */,
-				6DCBCA1ADFAD9A8B62B7D47430A320D9 /* Morph-prefix.pch */,
-				FAFAAB2BC98905366C3025F9A63400A1 /* Morph-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Examples/Morph iOS Examples/Pods/Target Support Files/Morph";
-			sourceTree = "<group>";
-		};
 		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +206,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		6BEF2CD355BEA0C79E4C8F455E317606 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493171B26C018FB57CE2AF8E286A3B2C /* Morph-umbrella.h in Headers */,
+				4C310576E9BA2D621681057BF300ABE4 /* Morph.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B81A38B6E26E09817FB5B8D65C21F55D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,35 +223,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7FC6503BB95BCAFA9AE7533B5E0CCF5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				178C967DBB6F646207E305070C752CE4 /* Morph-umbrella.h in Headers */,
-				D5A9FE13ABB2FAC98BF2A6D83C147D55 /* Morph.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		310EA1319E18FC92FF8C158106107294 /* Morph */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AAC6B918F98348C0E5FAD4E1AA459074 /* Build configuration list for PBXNativeTarget "Morph" */;
-			buildPhases = (
-				6D22A0C7094671F13F4662BE444CCB9B /* Sources */,
-				92876091D44CD43B173CA3B5482560AA /* Frameworks */,
-				F7FC6503BB95BCAFA9AE7533B5E0CCF5 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Morph;
-			productName = Morph;
-			productReference = 27C19152E7E8BD4BA2BD18FB0455D55B /* Morph.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		4A07873CF73CCE974E9E8A3C9B4F5A3E /* Pods-Morph iOS Examples */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D193504130D3CB21A5A78D0976FBBE3 /* Build configuration list for PBXNativeTarget "Pods-Morph iOS Examples" */;
@@ -255,6 +244,23 @@
 			productReference = FED9415F7F30D4CEA15076698DDA1F81 /* Pods_Morph_iOS_Examples.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		82A2DF07D1786B00337334DB3FB9906D /* Morph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C49894CDEE465A2B8A93D4098383C6E0 /* Build configuration list for PBXNativeTarget "Morph" */;
+			buildPhases = (
+				EC0BDD6184C0D87D432954F75784D249 /* Sources */,
+				57B39C673BD03B11B4F510098855AE38 /* Frameworks */,
+				6BEF2CD355BEA0C79E4C8F455E317606 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Morph;
+			productName = Morph;
+			productReference = 27C19152E7E8BD4BA2BD18FB0455D55B /* Morph.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -264,10 +270,10 @@
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
-					310EA1319E18FC92FF8C158106107294 = {
+					4A07873CF73CCE974E9E8A3C9B4F5A3E = {
 						LastSwiftMigration = 0810;
 					};
-					4A07873CF73CCE974E9E8A3C9B4F5A3E = {
+					82A2DF07D1786B00337334DB3FB9906D = {
 						LastSwiftMigration = 0810;
 					};
 				};
@@ -284,7 +290,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				310EA1319E18FC92FF8C158106107294 /* Morph */,
+				82A2DF07D1786B00337334DB3FB9906D /* Morph */,
 				4A07873CF73CCE974E9E8A3C9B4F5A3E /* Pods-Morph iOS Examples */,
 			);
 		};
@@ -299,18 +305,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6D22A0C7094671F13F4662BE444CCB9B /* Sources */ = {
+		EC0BDD6184C0D87D432954F75784D249 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF7A7E7733FAF20C3DF6FB6EBE712A14 /* Animatable.swift in Sources */,
-				A5F9E66B5AF3C0DAE02F89636196A5A6 /* AnimationAnimator.swift in Sources */,
-				2B619750FD8AB5B087690044BDB0D579 /* AnimationChainable.swift in Sources */,
-				6D8DE6C813C890EE2CEF1C8135EE8B75 /* AnimationGroup.swift in Sources */,
-				5D8A550BB30932BAC512B60417EF94E1 /* Attribute.swift in Sources */,
-				2B8E7AFC31CA0595DB13982C0AA99ACF /* KeyframeAnimation.swift in Sources */,
-				9750C6110A6618065D462041331C326C /* KeyframeAnimationFunction.swift in Sources */,
-				40E506113E2EE0C5F44A9819FC512D7A /* Morph-dummy.m in Sources */,
+				FD6E2CE6DD1E5C15C7E163B6DDCC7FDA /* Animatable.swift in Sources */,
+				307DA1895AA72DB7C2F93B9EF210821D /* AnimationAnimator+Properties.swift in Sources */,
+				53182DB0E01DA0D0A625A24BBA878489 /* AnimationAnimator.swift in Sources */,
+				90543B409FC1075B631A18C0126D5EDA /* AnimationChainable.swift in Sources */,
+				52EBEC8A110272371F403A6EB4C85C89 /* AnimationGroup.swift in Sources */,
+				5AF3D02B841912F8D77CEFB10975B1E0 /* Attribute.swift in Sources */,
+				C32D177C65D9DB3AFEB3F064C5B5C2D2 /* KeyframeAnimation+Effects.swift in Sources */,
+				325566022FFF6F585F4ABA164DCD1FAF /* KeyframeAnimation.swift in Sources */,
+				02EBB624F57E97E4CEBF5E0A5E5C1B09 /* KeyframeAnimationFunction.swift in Sources */,
+				0B4E1FBF46C9D28608A135B98E11F047 /* Morph-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,15 +328,46 @@
 		69C728084B4B8BF2A3160D4EC52105C6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Morph;
-			target = 310EA1319E18FC92FF8C158106107294 /* Morph */;
+			target = 82A2DF07D1786B00337334DB3FB9906D /* Morph */;
 			targetProxy = 97FD4CF1433EF8437F352CACBD4091B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		36EE4C3A50263311E93ED09EBA31ADF7 /* Release */ = {
+		0ACD2D39E6B3FAA2E2F7B96673C589B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B6CB44F3DA5E159524088579138B33A /* Morph.xcconfig */;
+			baseConfigurationReference = BFEA9B54530B5D432B7F2BAC264FF4B8 /* Morph.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Morph/Morph-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Morph/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Morph/Morph.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Morph;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0F700396287A75DAEFAEDD0A8FC9DF79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFEA9B54530B5D432B7F2BAC264FF4B8 /* Morph.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -463,37 +502,6 @@
 			};
 			name = Release;
 		};
-		F04A1C24840F50F30487DCED863D958E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B6CB44F3DA5E159524088579138B33A /* Morph.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Morph/Morph-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Morph/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Morph/Morph.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Morph;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		F1CACC81189ECB1BB82CE47F73EBE3D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -557,11 +565,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAC6B918F98348C0E5FAD4E1AA459074 /* Build configuration list for PBXNativeTarget "Morph" */ = {
+		C49894CDEE465A2B8A93D4098383C6E0 /* Build configuration list for PBXNativeTarget "Morph" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F04A1C24840F50F30487DCED863D958E /* Debug */,
-				36EE4C3A50263311E93ED09EBA31ADF7 /* Release */,
+				0ACD2D39E6B3FAA2E2F7B96673C589B6 /* Debug */,
+				0F700396287A75DAEFAEDD0A8FC9DF79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,5 +1,5 @@
 PODS:
-  - Morph (0.0.1)
+  - Morph (0.0.4)
 
 DEPENDENCIES:
   - Morph (from `../../Morph.podspec`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../../Morph.podspec
 
 SPEC CHECKSUMS:
-  Morph: 0ed31f171f70c349ceb41462f0785ab981724294
+  Morph: bea4369eeac57faec69b7c94803dbc00075b2d1d
 
 PODFILE CHECKSUM: 1fbf839e10a72adfb40eec53193ca876c60a38eb
 
