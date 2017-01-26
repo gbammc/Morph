@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Morph wraps CoreAnimation with a nicer syntax to help you build up awesome animations.
+Morph wraps CoreAnimation with a nicer syntax to help you build up awesome animations ([Objective-C version](https://github.com/gbammc/Mystique)).
 
 ## Demo
 
