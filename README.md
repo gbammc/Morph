@@ -45,7 +45,7 @@ pod "Morph"
 
 ### Carthage
 
-You also can use [Carthage](https://github.com/Carthage/Carthage) to install Morph by adding that to your Cartfile:
+You can also use [Carthage](https://github.com/Carthage/Carthage) to install Morph by adding that to your Cartfile:
 
 ```ruby
 github "gbammc/Morph"

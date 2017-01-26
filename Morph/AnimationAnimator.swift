@@ -13,11 +13,13 @@ public typealias AnimationComplectionAction = (Animatable, KeyframeAnimation) ->
 
 open class AnimationAnimator {
     
-    
+    /// The view that apply the animations.
     public let targetView: UIView?
 
+    /// The layer that apply the animations.
     public let targetLayer: CALayer?
     
+    /// The array that contains all animation groups.
     public var animations = [AnimationGroup]()
     
     /// Indicate whether to print the infomation about the animation or not. Defaults is NO.
