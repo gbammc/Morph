@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'Morph'
-  s.version  = '0.1.0'
+  s.version  = '0.1.1'
   s.license  = 'MIT'
   s.summary  = 'Helpers to create awsome animations.'
   s.homepage = 'https://github.com/gbammc/Morph'
