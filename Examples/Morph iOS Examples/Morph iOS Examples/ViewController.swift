@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         
         let oriFrame = demoView.frame
         
-        demoView.mr_startAnimations(closure: { (animate) in
+        demoView.mr_startAnimations({ (animate) in
             
             animate.logEnable = true
             
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             self.demoView.frame = oriFrame
             self.demoView.backgroundColor = .blue
             
-            self.demoView.mr_startAnimations(closure: { (animate) in
+            self.demoView.mr_startAnimations({ (animate) in
                 
                 animate.opacity.to(1).animate(0.3)
                 
@@ -89,12 +89,16 @@ class ViewController: UIViewController {
                 
                 view.layer.insertSublayer(radiation, at: 0)
                 
-                radiation.mr_startAnimations(closure: { (animate) in
+                radiation.mr_startAnimations({ (animate) in
+                    
                     animate.opacity.from(1).to(0).animate(duration)
                     animate.scale.from(1).to(0).animate(duration)
                     animate.center.from(fromPoint).to(toPoint).animate(duration)
-                }, completion: { 
+                    
+                }, completion: {
+                    
                     radiation.removeFromSuperlayer()
+                    
                 })
             }
         }
@@ -111,11 +115,15 @@ class ViewController: UIViewController {
             
             view.layer.insertSublayer(circle, at: 0)
             
-            circle.mr_startAnimations(closure: { (animate) in
+            circle.mr_startAnimations({ (animate) in
+                
                 animate.scale.by([0.8, scale, scale]).during([0, 0.5, 1.0]).animate(duration)
                 animate.opacity.from(0.5).to(0).animate(duration)
-            }, completion: { 
+                
+            }, completion: {
+                
                 circle.removeFromSuperlayer()
+                
             })
         }
     }
