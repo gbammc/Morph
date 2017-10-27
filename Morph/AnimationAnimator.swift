@@ -103,11 +103,11 @@ fileprivate extension AnimationAnimator {
     
     fileprivate func log(_ animation: KeyframeAnimation) {
         if let path = animation.toValue as? UIBezierPath {
-            dump("keyPath: \(animation.keyPath ?? ""), currentPoint: \(path.currentPoint), duration: \(animation.duration)")
+            NSLog("keyPath: \(animation.keyPath ?? ""), currentPoint: \(path.currentPoint), duration: \(animation.duration)")
         } else if let fromValue = animation.fromValue, let toValue = animation.toValue {
-            dump("keyPath: \(animation.keyPath ?? ""), fromValue: \(fromValue), toValue: \(toValue), duration: \(animation.duration)")
+            NSLog("keyPath: \(animation.keyPath ?? ""), fromValue: \(fromValue), toValue: \(toValue), duration: \(animation.duration)")
         } else {
-            dump("keyPath: \(animation.keyPath ?? ""), values: \(animation.values), keyTimes: \(animation.keyTimes)")
+            NSLog("keyPath: \(animation.keyPath ?? ""), values: \(String(describing: animation.values)), keyTimes: \(String(describing: animation.keyTimes))")
         }
     }
     

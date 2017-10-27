@@ -69,7 +69,7 @@ class ViewController: UIViewController {
             let radiationToRadius = imageView.frame.size.width * scale * 0.5
             
             for i in 0..<8 {
-                let degree = CGFloat(M_PI_4) * CGFloat(i)
+                let degree = (CGFloat.pi / 4) * CGFloat(i)
                 let fromPoint = CGPoint(x: imageView.center.x + sin(degree) * radiationFromRadius,
                                         y: imageView.center.y + cos(degree) * radiationFromRadius)
                 let toPoint = CGPoint(x: imageView.center.x + sin(degree) * radiationToRadius,

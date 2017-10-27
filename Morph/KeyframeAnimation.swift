@@ -105,11 +105,11 @@ fileprivate extension KeyframeAnimation {
         
         if (attribute == .rotateX || attribute == .rotateY || attribute == .rotateZ) {
             
-            value = NSNumber(value: (f / 180 * M_PI))
+            value = NSNumber(value: (f / 180 * .pi))
             
-        } else if (attribute == .scale || attribute == .scaleX || attribute == .scaleY), fabs(f) < DBL_EPSILON {
+        } else if (attribute == .scale || attribute == .scaleX || attribute == .scaleY), fabs(f) < .ulpOfOne {
             
-            value = NSNumber(value: DBL_EPSILON)
+            value = NSNumber(value: Double.ulpOfOne)
             
         }
         
@@ -126,11 +126,11 @@ fileprivate extension KeyframeAnimation {
         
         if (attribute == .rotateX || attribute == .rotateY || attribute == .rotateZ) {
             
-            value = NSNumber(value: (f / 180 * M_PI))
+            value = NSNumber(value: (f / 180 * .pi))
             
-        } else if (attribute == .scale || attribute == .scaleX || attribute == .scaleY), fabs(f) < DBL_EPSILON {
+        } else if (attribute == .scale || attribute == .scaleX || attribute == .scaleY), fabs(f) < .ulpOfOne {
             
-            value = NSNumber(value: DBL_EPSILON)
+            value = NSNumber(value: Double.ulpOfOne)
             
         } else if attribute == .xOffset {
             

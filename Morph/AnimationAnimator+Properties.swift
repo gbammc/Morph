@@ -453,8 +453,8 @@ public extension AnimationAnimator {
                         let scale = floatValue(for: animation)
                         let oriTransform = view.layer.transform
                         
-                        if fabs(oriTransform.m11 - scale) > CGFloat(FLT_EPSILON) ||
-                            fabs(oriTransform.m22 - scale) > CGFloat(FLT_EPSILON) {
+                        if fabs(oriTransform.m11 - scale) > .ulpOfOne ||
+                            fabs(oriTransform.m22 - scale) > .ulpOfOne {
                             let scaledTransform = CATransform3DMakeScale(scale, scale, 1)
                             
                             view.layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
@@ -474,8 +474,8 @@ public extension AnimationAnimator {
                         let scale = floatValue(for: animation)
                         let oriTransform = layer.transform
                         
-                        if fabs(oriTransform.m11 - scale) > CGFloat(FLT_EPSILON) ||
-                            fabs(oriTransform.m22 - scale) > CGFloat(FLT_EPSILON) {
+                        if fabs(oriTransform.m11 - scale) > .ulpOfOne ||
+                            fabs(oriTransform.m22 - scale) > .ulpOfOne {
                             let scaledTransform = CATransform3DMakeScale(scale, scale, 1)
                             
                             layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
@@ -505,7 +505,7 @@ public extension AnimationAnimator {
                         let scale = floatValue(for: animation)
                         let oriTransform = view.layer.transform
                         
-                        if fabs(oriTransform.m11 - scale) > CGFloat(FLT_EPSILON) {
+                        if fabs(oriTransform.m11 - scale) > .ulpOfOne {
                             let scaledTransform = CATransform3DMakeScale(scale, 1, 1)
                             
                             view.layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
@@ -525,7 +525,7 @@ public extension AnimationAnimator {
                         let scale = floatValue(for: animation)
                         let oriTransform = layer.transform
                         
-                        if fabs(oriTransform.m11 - scale) > CGFloat(FLT_EPSILON) {
+                        if fabs(oriTransform.m11 - scale) > .ulpOfOne {
                             let scaledTransform = CATransform3DMakeScale(scale, 1, 1)
                             
                             layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
@@ -555,7 +555,7 @@ public extension AnimationAnimator {
                         let scale = floatValue(for: animation)
                         let oriTransform = view.layer.transform
                         
-                        if fabs(oriTransform.m22 - scale) > CGFloat(FLT_EPSILON) {
+                        if fabs(oriTransform.m22 - scale) > .ulpOfOne {
                             let scaledTransform = CATransform3DMakeScale(1, scale, 1)
                             
                             view.layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
@@ -575,7 +575,7 @@ public extension AnimationAnimator {
                         let scale = floatValue(for: animation)
                         let oriTransform = layer.transform
                         
-                        if fabs(oriTransform.m22 - scale) > CGFloat(FLT_EPSILON) {
+                        if fabs(oriTransform.m22 - scale) > .ulpOfOne {
                             let scaledTransform = CATransform3DMakeScale(1, scale, 1)
                             
                             layer.transform = CATransform3DConcat(oriTransform, scaledTransform)
@@ -664,7 +664,7 @@ public extension AnimationAnimator {
             if let targetView = targetView {
                 
                 let radians = atan2(targetView.transform.b, targetView.transform.a)
-                let degrees = radians * (CGFloat(180) / CGFloat(M_PI) )
+                let degrees = radians * (CGFloat(180) / .pi)
                 group.from(degrees)
                 group.to(degrees)
                 group.complectionAction = { (view, animation) in
@@ -677,7 +677,7 @@ public extension AnimationAnimator {
             } else if let targetLayer = targetLayer {
                 
                 let radians = atan2(targetLayer.affineTransform().b, targetLayer.affineTransform().a)
-                let degrees = radians * (CGFloat(180) / CGFloat(M_PI) )
+                let degrees = radians * (CGFloat(180) / .pi)
                 group.from(degrees)
                 group.to(degrees)
                 group.complectionAction = { (layer, animation) in
@@ -700,7 +700,7 @@ public extension AnimationAnimator {
             if let targetView = targetView {
                 
                 let radians = atan2(targetView.transform.b, targetView.transform.a)
-                let degrees = radians * (CGFloat(180) / CGFloat(M_PI) )
+                let degrees = radians * (CGFloat(180) / .pi)
                 group.from(degrees)
                 group.to(degrees)
                 group.complectionAction = { (view, animation) in
@@ -713,7 +713,7 @@ public extension AnimationAnimator {
             } else if let targetLayer = targetLayer {
                 
                 let radians = atan2(targetLayer.affineTransform().b, targetLayer.affineTransform().a)
-                let degrees = radians * (CGFloat(180) / CGFloat(M_PI) )
+                let degrees = radians * (CGFloat(180) / .pi)
                 group.from(degrees)
                 group.to(degrees)
                 group.complectionAction = { (layer, animation) in
@@ -737,7 +737,7 @@ public extension AnimationAnimator {
                 targetView.layer.allowsEdgeAntialiasing = true
                 
                 let radians = atan2(targetView.transform.b, targetView.transform.a)
-                let degrees = radians * (CGFloat(180) / CGFloat(M_PI) )
+                let degrees = radians * (CGFloat(180) / .pi)
                 group.from(degrees)
                 group.to(degrees)
                 group.complectionAction = { (view, animation) in
@@ -751,7 +751,7 @@ public extension AnimationAnimator {
                 targetLayer.allowsEdgeAntialiasing = true
                 
                 let radians = atan2(targetLayer.affineTransform().b, targetLayer.affineTransform().a)
-                let degrees = radians * (CGFloat(180) / CGFloat(M_PI) )
+                let degrees = radians * (CGFloat(180) / .pi)
                 group.from(degrees)
                 group.to(degrees)
                 group.complectionAction = { (layer, animation) in

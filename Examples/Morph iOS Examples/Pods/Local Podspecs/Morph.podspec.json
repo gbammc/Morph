@@ -1,6 +1,6 @@
 {
   "name": "Morph",
-  "version": "0.0.4",
+  "version": "0.1.1",
   "license": "MIT",
   "summary": "Helpers to create awsome animations.",
   "homepage": "https://github.com/gbammc/Morph",
@@ -10,7 +10,7 @@
   "social_media_url": "https://twitter.com/alvin_zhu",
   "source": {
     "git": "https://github.com/gbammc/Morph.git",
-    "tag": "0.0.4"
+    "tag": "0.1.1"
   },
   "requires_arc": true,
   "source_files": "Morph/*{.h,.swift}",

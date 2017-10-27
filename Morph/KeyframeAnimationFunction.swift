@@ -92,15 +92,15 @@ func keyframeAnimationFunctionEaseInOutQuint(_ t: Double, b: Double, c: Double, 
 }
 
 func keyframeAnimationFunctionEaseInSine(_ t: Double, b: Double, c: Double, d: Double) -> Double {
-    return -c * cos(t / d * M_PI_2) + c + b
+    return -c * cos(t / d * .pi / 2) + c + b
 }
 
 func keyframeAnimationFunctionEaseOutSine(_ t: Double, b: Double, c: Double, d: Double) -> Double {
-    return c * sin(t / d * M_PI_2) + b
+    return c * sin(t / d * .pi / 2) + b
 }
 
 func keyframeAnimationFunctionEaseInOutSine(_ t: Double, b: Double, c: Double, d: Double) -> Double {
-    return -c / 2 * (cos(M_PI * t / d) - 1) + b
+    return -c / 2 * (cos(.pi * t / d) - 1) + b
 }
 
 func keyframeAnimationFunctionEaseInExpo(_ t: Double, b: Double, c: Double, d: Double) -> Double {
@@ -164,10 +164,10 @@ func keyframeAnimationFunctionEaseInElastic(_ t: Double, b: Double, c: Double, d
         a = c
         s = p / 4
     } else {
-        s = p / (2 * M_PI) * asin(c / a)
+        s = p / (2 * .pi) * asin(c / a)
     }
     t -= 1
-    return -(a * pow(2, 10 * t) * sin((t * d - s) * (2 * M_PI) / p)) + b
+    return -(a * pow(2, 10 * t) * sin((t * d - s) * (2 * .pi) / p)) + b
 }
 
 func keyframeAnimationFunctionEaseOutElastic(_ t: Double, b: Double, c: Double, d: Double) -> Double {
@@ -189,10 +189,10 @@ func keyframeAnimationFunctionEaseOutElastic(_ t: Double, b: Double, c: Double, 
         a = c
         s = p / 4
     } else {
-        s = p / (2 * M_PI) * asin(c / a)
+        s = p / (2 * .pi) * asin(c / a)
     }
     t -= 1
-    return (a * pow(2, 10 * t) * sin((t * d - s) * (2 * M_PI) / p)) + b
+    return (a * pow(2, 10 * t) * sin((t * d - s) * (2 * .pi) / p)) + b
 }
 
 func keyframeAnimationFunctionEaseInOutElastic(_ t: Double, b: Double, c: Double, d: Double) -> Double {
@@ -214,14 +214,14 @@ func keyframeAnimationFunctionEaseInOutElastic(_ t: Double, b: Double, c: Double
         a = c
         s = p / 4
     } else {
-        s = p / (2 * M_PI) * asin(c / a)
+        s = p / (2 * .pi) * asin(c / a)
     }
     
     t -= 1
     if t < 1 {
-        return -0.5 * (a * pow(2, 10 * t) * sin((t * d - s) * (2 * M_PI) / p)) + b
+        return -0.5 * (a * pow(2, 10 * t) * sin((t * d - s) * (2 * .pi) / p)) + b
     } else {
-        return a * pow(2, -10 * t) * sin((t * d - s) * (2 * M_PI) / p) * 0.5 + c + b
+        return a * pow(2, -10 * t) * sin((t * d - s) * (2 * .pi) / p) * 0.5 + c + b
     }
 }
 
